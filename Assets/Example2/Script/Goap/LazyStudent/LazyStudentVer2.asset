@@ -1,0 +1,430 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6894630445537547916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d60be2c5b25784bbc7280c54b08be4, type: 3}
+  m_Name: StudyingAtSchoool
+  m_EditorClassIdentifier: 
+  guid: f1d4055ad7bfba148aa490c50e1f81e9
+  position: {x: 311.2, y: 375.6874}
+  cost: 1
+  actionName: StudyingAtSchool(Morning)
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocSchool
+    value: 1
+  - name: MorningStudyTime
+    value: 1
+  Effects:
+  - name: studied
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 9096832949127414236}
+  isMorningStudy: 1
+--- !u!114 &-5768311197706348673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8de485000923e4d8182c49b02fa040, type: 3}
+  m_Name: Ate
+  m_EditorClassIdentifier: 
+  guid: 0f5b9ac240a7c90418bb4aff791c5ecf
+  position: {x: 600.80005, y: 245.01208}
+  important: 10
+  goalName: Ate
+  deletable: 0
+  goalList:
+  - name: ate
+    value: 1
+--- !u!114 &-4968618911159421807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d60be2c5b25784bbc7280c54b08be4, type: 3}
+  m_Name: StudyingAtSchoool
+  m_EditorClassIdentifier: 
+  guid: 3e40ec588129122479dc94008e44078a
+  position: {x: 311.2, y: 499.68744}
+  cost: 1
+  actionName: StudyingAtSchoool(Afternoon)
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocSchool
+    value: 1
+  - name: AfternoonStudyTime
+    value: 1
+  Effects:
+  - name: studied
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 1
+  forceReplan: 0
+  childiren:
+  - {fileID: 9096832949127414236}
+  isMorningStudy: 0
+--- !u!114 &-4155591106376203058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e41836b16b7e8e46a4cdb10191f009c, type: 3}
+  m_Name: StudiedExtra
+  m_EditorClassIdentifier: 
+  guid: 9250a8d3561be9e4d8ecb2a0e508aa9e
+  position: {x: 592.8, y: 629.6}
+  important: 75
+  goalName: StudiedExtra
+  deletable: 0
+  goalList:
+  - name: studyExtraClass
+    value: 1
+--- !u!114 &-2870786317459373500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1076cff770f3e4db0642446a147f33, type: 3}
+  m_Name: EatingAtRestaurant
+  m_EditorClassIdentifier: 
+  guid: 0494dd610c0f25e4bb173059b2ac85c3
+  position: {x: 323.99997, y: 245.01208}
+  cost: 1
+  actionName: EatingAtRestaurant
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocRestaurant
+    value: 1
+  Effects:
+  - name: ate
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -5768311197706348673}
+  eatTime: 2
+--- !u!114 &-2544410284204297275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb8560d7934f644693618b31950bbd3, type: 3}
+  m_Name: GoToPark
+  m_EditorClassIdentifier: 
+  guid: 6945fde02076e4f42b671c86be251b06
+  position: {x: 96.00005, y: 116.79999}
+  cost: 1
+  actionName: GoToPark
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocPark
+    value: 1
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 7489646450277219451}
+--- !u!114 &-1849964764441191602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24448f2ab6840bb4d86e2777e4a6f11e, type: 3}
+  m_Name: StudyingExtraClass
+  m_EditorClassIdentifier: 
+  guid: 44a87490105201d4d99a47a7408a4538
+  position: {x: 324, y: 629.5999}
+  cost: 1
+  actionName: StudyingExtraClass
+  isInteruptable: 0
+  PreConditions:
+  - name: atLocSchool
+    value: 1
+  - name: ExtraStudyTime
+    value: 1
+  - name: requiredExtraStudied
+    value: 1
+  Effects:
+  - name: studyExtraClass
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -4155591106376203058}
+--- !u!114 &-374122159448941897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcfdf9520b24594eaf5e5c8ad9f0d90, type: 3}
+  m_Name: GoToSchool
+  m_EditorClassIdentifier: 
+  guid: 0f9a557d8fbebe740b2c44bbc3ca915d
+  position: {x: 81.59999, y: 499.68744}
+  cost: 1
+  actionName: GoToSchool
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocSchool
+    value: 1
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -6894630445537547916}
+  - {fileID: -4968618911159421807}
+  - {fileID: -1849964764441191602}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0157dc1aad40f44a7fb65fe1fc86d3, type: 3}
+  m_Name: LazyStudentVer2
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 0}
+  actions:
+  - {fileID: 2428324248045504704}
+  - {fileID: -2544410284204297275}
+  - {fileID: -374122159448941897}
+  - {fileID: -6894630445537547916}
+  - {fileID: 7489646450277219451}
+  - {fileID: 5090685656619682731}
+  - {fileID: 8876165883987901293}
+  - {fileID: -2870786317459373500}
+  - {fileID: -4968618911159421807}
+  - {fileID: -1849964764441191602}
+  goals:
+  - {fileID: -5768311197706348673}
+  - {fileID: 5980409526337581102}
+  - {fileID: 9096832949127414236}
+  - {fileID: 8915831630083694471}
+  - {fileID: -4155591106376203058}
+--- !u!114 &2428324248045504704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662f50330cedb674684239f23c6a2d54, type: 3}
+  m_Name: GoToHome
+  m_EditorClassIdentifier: 
+  guid: e5afbcfc8d4b40c429d0479e95fd8651
+  position: {x: 87.99994, y: -50.399982}
+  cost: 1
+  actionName: GoToHome
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocHome
+    value: 1
+  worldEffects: []
+  isActive: 1
+  forceReplan: 0
+  childiren:
+  - {fileID: 5090685656619682731}
+--- !u!114 &5090685656619682731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa098c80c0a1794493019e01b2a9e0d, type: 3}
+  m_Name: SleepingAtHome
+  m_EditorClassIdentifier: 
+  guid: 0b333154cc8182f4b884ee82fe5e7465
+  position: {x: 339.2791, y: -50.04851}
+  cost: 1
+  actionName: SleepingAtHome
+  isInteruptable: 0
+  PreConditions:
+  - name: atLocHome
+    value: 1
+  - name: SleepTime
+    value: 1
+  Effects:
+  - name: Slept
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 5980409526337581102}
+--- !u!114 &5980409526337581102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac595facb0010d4c84aa2de61f511b5, type: 3}
+  m_Name: Slept
+  m_EditorClassIdentifier: 
+  guid: bc2f10434c134664b9a75b2d3e7d1ec7
+  position: {x: 592.87915, y: -50.04851}
+  important: 100
+  goalName: Slept
+  deletable: 0
+  goalList:
+  - name: Slept
+    value: 1
+--- !u!114 &7489646450277219451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21802743f4b26ac4aab9f50847d75783, type: 3}
+  m_Name: PlayingAtPark
+  m_EditorClassIdentifier: 
+  guid: bc7d1b298b31c2348bdd2d0e1f3d2fb4
+  position: {x: 340.79993, y: 116.799995}
+  cost: 1
+  actionName: PlayingAtPark
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocPark
+    value: 1
+  Effects:
+  - name: hadFun
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 8915831630083694471}
+  playTime: 3
+--- !u!114 &8876165883987901293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1eb4cf31fa10c442b58d86b0681d888, type: 3}
+  m_Name: GoToRestaurant
+  m_EditorClassIdentifier: 
+  guid: 63b78d4342f299c4e94b124b39691dd9
+  position: {x: 95.99998, y: 245.01208}
+  cost: 1
+  actionName: GoToRestaurant
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocRestaurant
+    value: 1
+  worldEffects: []
+  isActive: 1
+  forceReplan: 0
+  childiren:
+  - {fileID: -2870786317459373500}
+--- !u!114 &8915831630083694471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb73d14052badc44a495f9e632b4738, type: 3}
+  m_Name: Played
+  m_EditorClassIdentifier: 
+  guid: 0cf275923a222a64191c34ccca55b0cc
+  position: {x: 592.8, y: 116.800026}
+  important: 0
+  goalName: Played
+  deletable: 1
+  goalList:
+  - name: hadFun
+    value: 1
+--- !u!114 &9096832949127414236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376327ee7bcbaff4b8d68679f1c7191b, type: 3}
+  m_Name: Studied
+  m_EditorClassIdentifier: 
+  guid: 2ff44446c7aaaa44291f0dfb451fd679
+  position: {x: 600.00006, y: 422.8874}
+  important: 50
+  goalName: Studied
+  deletable: 0
+  goalList:
+  - name: studied
+    value: 1

@@ -1,0 +1,489 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8112052497255331177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bf773fa1a28704b8f82df2ee823bc4, type: 3}
+  m_Name: MoveToPlace
+  m_EditorClassIdentifier: 
+  guid: 11e5b048a9b4aa54792aff7adbcee6f6
+  position: {x: 7.999986, y: 576}
+  cost: 1
+  actionName: MoveToPlace(Office)
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocWork
+    value: 1
+  worldEffects: []
+  isActive: 1
+  forceReplan: 0
+  childiren:
+  - {fileID: 6688475969555253209}
+  - {fileID: -4255853273946232858}
+  - {fileID: 4050103148783284285}
+  - {fileID: 841808920084105611}
+  location: PostOffice
+--- !u!114 &-7208638419624472457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada1854b18a93084589022f6721d7785, type: 3}
+  m_Name: PlayAtThePark
+  m_EditorClassIdentifier: 
+  guid: 41537808994edc74d9b5f144b0c0a845
+  position: {x: 470.40002, y: -0.000035668563}
+  important: 50
+  goalName: PlayAtThePark
+  deletable: 0
+  goalList:
+  - name: hadFun
+    value: 1
+--- !u!114 &-6755776430984536563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ef66286eb65194e8c36ee624669424, type: 3}
+  m_Name: Eat
+  m_EditorClassIdentifier: 
+  guid: 78e93609ca3b311478d621f2c5ad2b68
+  position: {x: 476.00003, y: 154.4}
+  important: 0
+  goalName: Eat
+  deletable: 0
+  goalList:
+  - name: ate
+    value: 1
+--- !u!114 &-6348451684762167406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a971b358284c9742b16ab33a3ac3e51, type: 3}
+  m_Name: Sleeping
+  m_EditorClassIdentifier: 
+  guid: b11487bc0fbb9b74081605d51c310776
+  position: {x: 230.39995, y: 302.34924}
+  cost: 1
+  actionName: Sleeping
+  isInteruptable: 1
+  PreConditions:
+  - name: sleepTime
+    value: 1
+  - name: atLocHome
+    value: 1
+  Effects:
+  - name: slept
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 1445139271645033796}
+--- !u!114 &-5542585680073574647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bf773fa1a28704b8f82df2ee823bc4, type: 3}
+  m_Name: MoveToPlace
+  m_EditorClassIdentifier: 
+  guid: 8d5d604069fc0fa46825a0d1f2bcb1ee
+  position: {x: 7.999942, y: 302.34924}
+  cost: 1
+  actionName: MoveToPlace(Home)
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocHome
+    value: 1
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -6348451684762167406}
+  location: Home2
+--- !u!114 &-5524311270590594367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce45e1786b7fc543b7704f7680df1dc, type: 3}
+  m_Name: Playing
+  m_EditorClassIdentifier: 
+  guid: 2c467895c8027aa48aa5a829b19d5428
+  position: {x: 230.40004, y: 0.000005722046}
+  cost: 1
+  actionName: Playing
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocPark
+    value: 1
+  Effects:
+  - name: hadFun
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -7208638419624472457}
+  playTime: 5
+--- !u!114 &-5329747391280439039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed13e72c372965b409d9174bb7e4223b, type: 3}
+  m_Name: WorkNightShift
+  m_EditorClassIdentifier: 
+  guid: 863b8dcc00dd1964e821fa985281c238
+  position: {x: 464.79996, y: 729.59985}
+  important: 50
+  goalName: WorkNightShift
+  deletable: 0
+  goalList:
+  - name: earnMuchExtra
+    value: 1
+--- !u!114 &-4255853273946232858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c243325ca6304474ea37af867839f3d3, type: 3}
+  m_Name: WorkingInAfternoon
+  m_EditorClassIdentifier: 
+  guid: a0602f48ed4225f43a14dc430ffec300
+  position: {x: 189.59999, y: 517.54913}
+  cost: 1
+  actionName: WorkingInAfternoon
+  isInteruptable: 1
+  PreConditions:
+  - name: afternoonShift
+    value: 1
+  - name: atLocWork
+    value: 1
+  Effects:
+  - name: worked
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 1
+  forceReplan: 0
+  childiren:
+  - {fileID: 3265927673664618138}
+--- !u!114 &-3749114554843414766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8bb75f6e0b4e044aaae8bacc8a946a, type: 3}
+  m_Name: WorkExtraHours
+  m_EditorClassIdentifier: 
+  guid: 30ba2d00a1a5b6b43a1d240430ea6cd1
+  position: {x: 459.19983, y: 632}
+  important: 100
+  goalName: WorkExtraHours
+  deletable: 0
+  goalList:
+  - name: earnExtra
+    value: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0157dc1aad40f44a7fb65fe1fc86d3, type: 3}
+  m_Name: Worker3
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 0}
+  actions:
+  - {fileID: 6972768670158525187}
+  - {fileID: -5524311270590594367}
+  - {fileID: -6348451684762167406}
+  - {fileID: 7467707058165610422}
+  - {fileID: 4050103148783284285}
+  - {fileID: -4255853273946232858}
+  - {fileID: 6688475969555253209}
+  - {fileID: 841808920084105611}
+  - {fileID: 3937883379261992035}
+  - {fileID: -5542585680073574647}
+  - {fileID: -8112052497255331177}
+  goals:
+  - {fileID: 1445139271645033796}
+  - {fileID: -6755776430984536563}
+  - {fileID: -7208638419624472457}
+  - {fileID: 3265927673664618138}
+  - {fileID: -3749114554843414766}
+  - {fileID: -5329747391280439039}
+--- !u!114 &841808920084105611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7481f819ee18804dbd65d65e43efad7, type: 3}
+  m_Name: WorkingAtNight
+  m_EditorClassIdentifier: 
+  guid: fc290f860c449c04c8b18d033bf4c7b9
+  position: {x: 189.59996, y: 729.6}
+  cost: 1
+  actionName: WorkingAtNight
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocWork
+    value: 1
+  - name: nightShift
+    value: 1
+  - name: needMoney
+    value: 1
+  Effects:
+  - name: earnMuchExtra
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -5329747391280439039}
+--- !u!114 &1445139271645033796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d94bd5f153553f408b657bf6bb5f0a8, type: 3}
+  m_Name: SleepAtHome
+  m_EditorClassIdentifier: 
+  guid: 6c711e76841424c43b46ccdbe8a6e5d1
+  position: {x: 475.99997, y: 302.34924}
+  important: 100
+  goalName: SleepAtHome
+  deletable: 0
+  goalList:
+  - name: slept
+    value: 1
+--- !u!114 &3265927673664618138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809c57362398fa24bb951c3855dfe7ab, type: 3}
+  m_Name: Work
+  m_EditorClassIdentifier: 
+  guid: 18f552e4a10dd1544a216986b38b8dfc
+  position: {x: 475.99994, y: 446.4}
+  important: 75
+  goalName: Work
+  deletable: 0
+  goalList:
+  - name: worked
+    value: 1
+--- !u!114 &3937883379261992035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bf773fa1a28704b8f82df2ee823bc4, type: 3}
+  m_Name: MoveToPlace
+  m_EditorClassIdentifier: 
+  guid: c44206792cede814d8d7ec71aa3bbba2
+  position: {x: 7.999942, y: 154.34921}
+  cost: 1
+  actionName: MoveToPlace(Restaurant)
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocRestaurant
+    value: 1
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 7467707058165610422}
+  location: Restaurant
+--- !u!114 &4050103148783284285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a3a6cd380fabc9469be2327d09c6f14, type: 3}
+  m_Name: WorkingExtra
+  m_EditorClassIdentifier: 
+  guid: eb2cd79211f4ec24e96a6fb17bc994dd
+  position: {x: 189.59999, y: 631.9492}
+  cost: 1
+  actionName: WorkingExtra
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocWork
+    value: 1
+  - name: needMoney
+    value: 1
+  Effects:
+  - name: earnExtra
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -3749114554843414766}
+  workTime: 5
+--- !u!114 &6688475969555253209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21fd679bda206e46ae46ee7f881a884, type: 3}
+  m_Name: WorkingInMorning
+  m_EditorClassIdentifier: 
+  guid: 7c335d7d3ac1d1a4db4eeafb28f5ccaf
+  position: {x: 189.59999, y: 407.94922}
+  cost: 1
+  actionName: WorkingInMorning
+  isInteruptable: 1
+  PreConditions:
+  - name: morningShift
+    value: 1
+  - name: atLocWork
+    value: 1
+  Effects:
+  - name: worked
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 1
+  forceReplan: 0
+  childiren:
+  - {fileID: 3265927673664618138}
+--- !u!114 &6972768670158525187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bf773fa1a28704b8f82df2ee823bc4, type: 3}
+  m_Name: MoveToPlace
+  m_EditorClassIdentifier: 
+  guid: 07988514b1183ee48a3e60b39c43466a
+  position: {x: 13.298999, y: -0.00000035095218}
+  cost: 1
+  actionName: MoveToPlace(Park)
+  isInteruptable: 1
+  PreConditions: []
+  Effects: []
+  agentEffects:
+  - name: atLocPark
+    value: 1
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -5524311270590594367}
+  location: Park2
+--- !u!114 &7467707058165610422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10eeefe501f7774780b802bdd207181, type: 3}
+  m_Name: Eating
+  m_EditorClassIdentifier: 
+  guid: 257f3e2053cea8e418ade14f17caccda
+  position: {x: 236.79997, y: 154.34921}
+  cost: 1
+  actionName: Eating
+  isInteruptable: 1
+  PreConditions:
+  - name: atLocRestaurant
+    value: 1
+  - name: isHungry
+    value: 1
+  Effects:
+  - name: ate
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -6755776430984536563}
+  eatTime: 1

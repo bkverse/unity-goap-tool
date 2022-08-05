@@ -1,0 +1,310 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7928937293650679930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1019df288143c6740a6b4e46e9fa1229, type: 3}
+  m_Name: ActionGoToWaitingArea
+  m_EditorClassIdentifier: 
+  guid: 0d0e79357d423224d928759d4fb4422a
+  position: {x: -279.2, y: -330.4}
+  cost: 1
+  actionName: GoToWaitingArea
+  PreConditions:
+  - name: Registered
+    value: 1
+  Effects:
+  - name: AtWaitingArea
+    value: 1
+  agentEffects:
+  - name: AtHospital
+    value: 1
+  worldEffects: []
+  isActive: 0
+  isInteruptable: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 6276497623162354000}
+--- !u!114 &-7279900739171885854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b182768c61fbfd1459b819c21af200ab, type: 3}
+  m_Name: GoalTreatPatient
+  m_EditorClassIdentifier: 
+  guid: f939a16c1aa77364592caadef8d33d62
+  position: {x: 288, y: -154.40001}
+  important: 10
+  goalName: TreatPatient
+  deletable: 0
+  goalList:
+  - name: treatedPatient
+    value: 1
+--- !u!114 &-2920987141191554653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d891a7ead40394fab027f788e01bfb, type: 3}
+  m_Name: ActionTreatPatient
+  m_EditorClassIdentifier: 
+  guid: 52eade39af18abd409d82cc490febc32
+  position: {x: -63.99984, y: -154.39996}
+  cost: 1
+  actionName: TreatPatient
+  PreConditions:
+  - name: hadPatient
+    value: 1
+  Effects:
+  - name: treatedPatient
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  isInteruptable: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -7279900739171885854}
+--- !u!114 &-1372362318619537931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e8023021a83ee0409ecb1953afb9cab, type: 3}
+  m_Name: GoalGoHome
+  m_EditorClassIdentifier: 
+  guid: 8ff61d6581be1db4e945e95a4912f014
+  position: {x: 323.20007, y: -253.59998}
+  important: 7
+  goalName: GoHome
+  deletable: 1
+  goalList:
+  - name: AtHome
+    value: 1
+--- !u!114 &-920529363895258237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f323c39b62ddbaf4ea1d80ea9a6e0ebb, type: 3}
+  m_Name: ActionIdle
+  m_EditorClassIdentifier: 
+  guid: d1993d8982f348e459b54677b9baec1a
+  position: {x: -65.599976, y: -38.40004}
+  cost: 1
+  actionName: Idle
+  PreConditions: []
+  Effects:
+  - name: beingIdle
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 1
+  isInteruptable: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 2494193911728708538}
+--- !u!114 &-715783980652896768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 394ff1d97306e6e458c71802038ce542, type: 3}
+  m_Name: ActionGetPatient
+  m_EditorClassIdentifier: 
+  guid: 82b255559d9b4c0408bb8b5094429063
+  position: {x: -279.19998, y: -154.39996}
+  cost: 1
+  actionName: GetPatient
+  PreConditions: []
+  Effects:
+  - name: hadPatient
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  isInteruptable: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -2920987141191554653}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0157dc1aad40f44a7fb65fe1fc86d3, type: 3}
+  m_Name: New Agent View
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 0}
+  actions:
+  - {fileID: -920529363895258237}
+  - {fileID: -715783980652896768}
+  - {fileID: -2920987141191554653}
+  - {fileID: 6276497623162354000}
+  - {fileID: 2633176008586717941}
+  - {fileID: -7928937293650679930}
+  - {fileID: 4354766079072027110}
+  goals:
+  - {fileID: 2494193911728708538}
+  - {fileID: -7279900739171885854}
+  - {fileID: 3342817985221454690}
+  - {fileID: -1372362318619537931}
+--- !u!114 &2494193911728708538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af142da6b9daaeb4a8fed8b8022d023d, type: 3}
+  m_Name: GoalIdle
+  m_EditorClassIdentifier: 
+  guid: daecd6601f8cfd649b59970cfb863888
+  position: {x: 323.19998, y: -38.40002}
+  important: 0
+  goalName: Idle
+  deletable: 0
+  goalList:
+  - name: beingIdle
+    value: 1
+--- !u!114 &2633176008586717941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c722329f23c15ba43b4cb0d7a1275fd3, type: 3}
+  m_Name: ActionGoHome
+  m_EditorClassIdentifier: 
+  guid: c46b2e5c15bdcc547a944b8de355b53c
+  position: {x: 154.39992, y: -253.59998}
+  cost: 1
+  actionName: GoHome
+  PreConditions:
+  - name: Healthy
+    value: 1
+  Effects: []
+  agentEffects:
+  - name: AtHome
+    value: 1
+  worldEffects: []
+  isActive: 1
+  isInteruptable: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -1372362318619537931}
+--- !u!114 &3342817985221454690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d248e2812656ab4f8104c35a20f81a8, type: 3}
+  m_Name: GoalGetTreat
+  m_EditorClassIdentifier: 
+  guid: 15e9cb050afaf5243ba200b21b930618
+  position: {x: 323.2, y: -407.1999}
+  important: 10
+  goalName: GetTreat
+  deletable: 1
+  goalList:
+  - name: Healthy
+    value: 1
+--- !u!114 &4354766079072027110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed5d3f1d4786f14abc7963897adae42, type: 3}
+  m_Name: ActionGoToRegister
+  m_EditorClassIdentifier: 
+  guid: b38e1540ef66f234587cb46f1084a333
+  position: {x: -466.39987, y: -330.3999}
+  cost: 1
+  actionName: GoToRegister
+  PreConditions: []
+  Effects:
+  - name: Registered
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  isInteruptable: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -7928937293650679930}
+--- !u!114 &6276497623162354000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd2286eaee8f3c4d876abf8cdf13bb9, type: 3}
+  m_Name: ActionGettingTreat
+  m_EditorClassIdentifier: 
+  guid: 7521fc405ac8f624bb997d0ed9197029
+  position: {x: -65.577255, y: -330.39993}
+  cost: 1
+  actionName: GettingTreat
+  PreConditions:
+  - name: AtHospital
+    value: 1
+  Effects:
+  - name: GotTreated
+    value: 1
+  agentEffects:
+  - name: Healthy
+    value: 1
+  worldEffects: []
+  isActive: 0
+  isInteruptable: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 3342817985221454690}
+  - {fileID: 2633176008586717941}

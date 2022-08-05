@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3314893610230866259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b182768c61fbfd1459b819c21af200ab, type: 3}
+  m_Name: GoalTreatPatient
+  m_EditorClassIdentifier: 
+  guid: cd2a5761310447c41961ecfac9557282
+  position: {x: 472.99203, y: -0.0000027969363}
+  important: 10
+  goalName: GoalTreatPatient
+  deletable: 1
+  goalList:
+  - name: treatedPatient
+    value: 1
+--- !u!114 &-716276355541363764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af142da6b9daaeb4a8fed8b8022d023d, type: 3}
+  m_Name: GoalIdle
+  m_EditorClassIdentifier: 
+  guid: 25357f60d5b27ed4bbb1d8e0f0529a99
+  position: {x: 472.8, y: 126.40003}
+  important: 1
+  goalName: GoalIdle
+  deletable: 1
+  goalList:
+  - name: beingIdle
+    value: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0157dc1aad40f44a7fb65fe1fc86d3, type: 3}
+  m_Name: NurseView
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 0}
+  actions:
+  - {fileID: 3184945887843197004}
+  - {fileID: 5461768013216867966}
+  - {fileID: 7608807764682583913}
+  goals:
+  - {fileID: -3314893610230866259}
+  - {fileID: -716276355541363764}
+--- !u!114 &3184945887843197004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 394ff1d97306e6e458c71802038ce542, type: 3}
+  m_Name: ActionGetPatient
+  m_EditorClassIdentifier: 
+  guid: 05c68cf3a4ebf4547aa6d1ed60e70931
+  position: {x: -3.4980013, y: 0.0000061095816}
+  cost: 1
+  actionName: ActionGetPatient
+  isInteruptable: 1
+  PreConditions: []
+  Effects:
+  - name: hadPatient
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: 5461768013216867966}
+--- !u!114 &5461768013216867966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d891a7ead40394fab027f788e01bfb, type: 3}
+  m_Name: ActionTreatPatient
+  m_EditorClassIdentifier: 
+  guid: 1a063678e3f5740459dcba272e847f03
+  position: {x: 229.60004, y: 0.0000061095816}
+  cost: 1
+  actionName: ActionTreatPatient
+  isInteruptable: 1
+  PreConditions:
+  - name: hadPatient
+    value: 1
+  Effects:
+  - name: treatedPatient
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -3314893610230866259}
+--- !u!114 &7608807764682583913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f323c39b62ddbaf4ea1d80ea9a6e0ebb, type: 3}
+  m_Name: ActionIdle
+  m_EditorClassIdentifier: 
+  guid: 708ea6a0b5a70be4390ed287f95f066d
+  position: {x: 229.60005, y: 126.4}
+  cost: 1
+  actionName: ActionIdle
+  isInteruptable: 1
+  PreConditions: []
+  Effects:
+  - name: beingIdle
+    value: 1
+  agentEffects: []
+  worldEffects: []
+  isActive: 0
+  forceReplan: 0
+  childiren:
+  - {fileID: -716276355541363764}

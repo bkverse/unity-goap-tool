@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf8e6cefc14646468a3a6c8ecd60022, type: 3}
+  m_Name: AllLocationInfor
+  m_EditorClassIdentifier: 
+  infos:
+  - codeName: School
+    obj: {fileID: 5236944651154668512, guid: 06b70921b6d772342bb56b881ba2544e, type: 3}
+  - codeName: Park1
+    obj: {fileID: 8585779280554916716, guid: 236b1a89b565ccd4ab1d26c8dc74f52e, type: 3}
+  - codeName: Park2
+    obj: {fileID: 8538328575445898746, guid: e65107fb1bc97b3419d98d2db568ae6a, type: 3}
+  - codeName: Park3
+    obj: {fileID: 7446300825260658921, guid: 7ae08550de63a3d4e9eb7f35be8187ce, type: 3}
+  - codeName: PoliceStation
+    obj: {fileID: 7067339895564275593, guid: 0872f18524c56224ea37a92eb2579381, type: 3}
+  - codeName: PostOffice
+    obj: {fileID: 1103902619967892081, guid: 662837b6be085474397414fdf2c5ff2e, type: 3}
+  - codeName: Restaurant
+    obj: {fileID: 2026470118286447801, guid: f43cbb2040d59824cae6fe79420ed7d3, type: 3}
+  - codeName: Library
+    obj: {fileID: 3267349236567645744, guid: 2248e47fd15913e439a49b4b0c5dbd07, type: 3}
+  - codeName: Home1
+    obj: {fileID: 7407260604420580156, guid: 9a1fd96c12ff90b4f95d9c219d4a0f0f, type: 3}
+  - codeName: Home2
+    obj: {fileID: 74243171412637253, guid: 8cb3fa8f74e84d149ba45c32bbe2db3d, type: 3}
