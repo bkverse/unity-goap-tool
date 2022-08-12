@@ -20,7 +20,6 @@ public class GoToHome : CActionBase
         {
             agent.position3D = loc.obj.transform.position;
             agent.agentFact.RemoveContains("atLoc");
-            //agent.ShowVisual(true);
 
             return true;
         }
@@ -42,7 +41,6 @@ public class GoToHome : CActionBase
 
     public override bool Pos_Perform()
     {
-        //agent.ShowVisual(false);
         return base.Pos_Perform();
     }
     public override bool HasCompleted()
@@ -54,6 +52,7 @@ public class GoToHome : CActionBase
 
         if ((_navMeshAgent.remainingDistance <= 1f))
         {
+
             return true;
         }
 

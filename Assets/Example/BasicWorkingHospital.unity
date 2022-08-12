@@ -2433,7 +2433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1445562788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2448,7 +2448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patientPrefab: {fileID: 3074418086553501365, guid: 307c49a02065d2e419f1060006b9ed26, type: 3}
   numPatients: 1
-  maxPatients: 1
+  maxPatients: 0
 --- !u!4 &1445562789
 Transform:
   m_ObjectHideFlags: 0

@@ -1305,7 +1305,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &-2816097737344436329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,7 +1324,6 @@ MonoBehaviour:
   goalBlacklist: []
   position3D: {x: 0, y: 0, z: 0}
   agentView: {fileID: 11400000, guid: 49a2a02b391b25a45a10658e48ff9167, type: 2}
-  visual: {fileID: 361366373240244221}
   hungerIncPerSec: 10
   boredomIncPerSec: 5
 --- !u!1 &5178424278924207271

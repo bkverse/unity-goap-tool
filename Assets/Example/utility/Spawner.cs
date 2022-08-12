@@ -22,9 +22,9 @@ public class Spawner : MonoBehaviour
 
     void SpawnPatients()
     {
-        if (countPatients < maxPatients)
+        Instantiate(patientPrefab, this.transform.position, Quaternion.identity);
+        while (countPatients < maxPatients)
         {
-            Instantiate(patientPrefab, this.transform.position, Quaternion.identity);
             Invoke("SpawnPatients", Random.Range(2, 10));
             countPatients++;
         }

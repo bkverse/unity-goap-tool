@@ -11,14 +11,10 @@ public class PlayingAtPark : CActionBase
     [SerializeField] float playTime = 5f;
     IAgentExp2 student;
 
-    public override void Initiate(CAgent a)
-    {
-        base.Initiate(a);
-        student = (IAgentExp2)agent;
-    }
     public override bool Pre_Perform()
     {
         timer = 0;
+        student = (IAgentExp2)agent;
         //if ((agent.agentFact.GetFact("MorningStudyTime").value == 1) ||
         //    (agent.agentFact.GetFact("AfternoonStudyTime").value == 1))
         //{

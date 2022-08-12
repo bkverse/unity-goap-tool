@@ -1356,7 +1356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5140769221628386403
 Transform:
   m_ObjectHideFlags: 0
@@ -1451,7 +1451,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &6020847584123653103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,8 +1470,8 @@ MonoBehaviour:
   goalBlacklist: []
   position3D: {x: 0, y: 0, z: 0}
   agentView: {fileID: 11400000, guid: 4ac2eefd13d8eec478af718c0182ee9f, type: 2}
-  visual: {fileID: 7652356210768984853}
   hungerIncPerSec: 10
+  boredomIncPerSec: 20
   moneyDecPerSec: 20
   moneyIncPerShift: 50
 --- !u!1 &5470749033871163663

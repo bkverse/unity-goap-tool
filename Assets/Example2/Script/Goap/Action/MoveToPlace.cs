@@ -20,13 +20,11 @@ public class MoveToPlace : CActionBase
         AllLocationInfor infor = AllLocationInfor.Instance;
         LocationInformation loc = infor.infos.Find(e => e.codeName.Equals(location));
 
-        
+
         if (loc != null)
         {
             agent.position3D = loc.obj.transform.position;
             agent.agentFact.RemoveContains("atLoc");
-            
-            //agent.ShowVisual(true);
 
             return true;
         }
@@ -49,10 +47,6 @@ public class MoveToPlace : CActionBase
 
     public override bool Pos_Perform()
     {
-        if (!location.Contains("Park"))
-        {
-            //agent.ShowVisual(false);
-        }
         return base.Pos_Perform();
     }
     public override bool HasCompleted()
@@ -62,7 +56,7 @@ public class MoveToPlace : CActionBase
             return false;
         }
 
-        if ((_navMeshAgent.remainingDistance <= 0.5f))
+        if ((_navMeshAgent.remainingDistance <= 1f))
         {
 
             return true;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 using Unity.GOAP.World;
 using Unity.GOAP.Agent;
+
 namespace Unity.GOAP.ActionBase {
     public class CActionBase : Node
     {
@@ -64,9 +65,6 @@ namespace Unity.GOAP.ActionBase {
         public virtual CActionBase Clone(CAgent a)
         {
             CActionBase clone = (CActionBase)this.MemberwiseClone();
-            clone.cost = this.cost;
-            clone.actionName = this.actionName;
-
             clone.agent = a;
 
             clone.preconditions = new CFactManager();
@@ -89,6 +87,7 @@ namespace Unity.GOAP.ActionBase {
             {
                 clone.effects.AddFact(f2.name, f2.value);
             }
+
             return clone;
         }
 

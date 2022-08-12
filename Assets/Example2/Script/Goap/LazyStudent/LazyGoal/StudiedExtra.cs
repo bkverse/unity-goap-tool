@@ -7,15 +7,12 @@ using Unity.GOAP.Agent;
 
 public class StudiedExtra : CGoal
 {
-    public override void OnStart()
-    {
+    IAgentExp2 student;
 
-        base.OnStart();
-    }
     public override void OnComplete()
     {
         base.OnComplete();
-        IAgentExp2 student = (IAgentExp2)agent;
+        student = (IAgentExp2)agent;
         student.ResetSkipCounter();
     }
 }

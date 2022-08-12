@@ -29,8 +29,7 @@ namespace Unity.GOAP.Agent
         protected CGoal currentGoal;
 
         [SerializeField] protected AgentView agentView;
-        //[SerializeField] protected GameObject visual;
-        
+
         protected CPlanner planner;
 
         public CAgent() : base()
@@ -45,19 +44,18 @@ namespace Unity.GOAP.Agent
             actionList = new List<CActionBase>();
             goalList = new List<CGoal>();
 
-            Debug.Log("action id of all action:");
             foreach (CActionBase a in agentView.actions)
             {
                 a.Initiate(this);
-                CActionBase act = (CActionBase)a.Clone(this);
+                CActionBase act =  a.Clone(this);
                 actionList.Add(act);
             }
 
             foreach (CGoal g in agentView.goals)
             {
                 g.Initiate(this);
-                CGoal go = (CGoal)g.Clone(this);
-                goalList.Add(go);
+                CGoal goal = g.Clone(this);
+                goalList.Add(goal);
             }
         }
 
@@ -292,11 +290,6 @@ namespace Unity.GOAP.Agent
             }
 
         }
-
-        //public void ShowVisual(bool show = true)
-        //{
-        //    visual.SetActive(show);
-        //}
     }
 
 }

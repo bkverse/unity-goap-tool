@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A7FC064F-7E6A-895B-1D9F-59A60803C908}</ProjectGuid>
+    <ProjectGuid>{361D5369-0E10-B9F2-29D8-079CCD84CCFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -114,6 +114,7 @@
     <Compile Include="Assets\Example\Nurse\NurseAction\ActionTreatPatient.cs" />
     <Compile Include="Assets\Example2\Script\Goap\Goal\WorkExtraHours.cs" />
     <Compile Include="Assets\Example2\Script\Loactions\LocationInformation.cs" />
+    <Compile Include="Assets\Example2\Script\Goap\Goal\SkipSchoolAndPlay.cs" />
     <Compile Include="Assets\Example\Patient\PatientGoal\GoalGetTreat.cs" />
     <Compile Include="Assets\Example2\Script\Goap\Action\Sleeping.cs" />
     <Compile Include="Assets\Example\utility\ResourceManager.cs" />

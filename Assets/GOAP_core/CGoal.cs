@@ -32,9 +32,9 @@ namespace Unity.GOAP.Goal
 
         public virtual CGoal Clone(CAgent a)
         {
-            CGoal clone = (CGoal)MemberwiseClone();
-            clone.agent = a;
-            clone.goals = new CFactManager(goalList);
+            CGoal clone = (CGoal)this.MemberwiseClone();
+            goals = new CFactManager(goalList);
+            this.agent = a;
             return clone;
         }
 
